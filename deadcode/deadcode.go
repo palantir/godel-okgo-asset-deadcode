@@ -15,8 +15,6 @@
 package deadcode
 
 import (
-	"strings"
-
 	"github.com/palantir/okgo/checker"
 	"github.com/palantir/okgo/okgo"
 )
@@ -31,12 +29,7 @@ func Creator() checker.Creator {
 		TypeName,
 		Priority,
 		func(cfgYML []byte) (okgo.Checker, error) {
-			return checker.NewAmalgomatedChecker(TypeName, checker.Priority(Priority), checker.LineParserWithWd(
-				func(line, wd string) okgo.Issue {
-					// deadcode check prefixes its output with "deadcode: ", so trim it before processing
-					return okgo.NewIssueFromLine(strings.TrimPrefix(line, "deadcode: "), wd)
-				},
-			)), nil
+			return checker.NewAmalgomatedChecker(TypeName, checker.Priority(Priority)), nil
 		},
 	)
 }
