@@ -36,7 +36,7 @@ const (
 `
 )
 
-func TestDeadcodeInProjectDir(t *testing.T) {
+func TestDeadcode(t *testing.T) {
 	assetPath, err := products.Bin("deadcode-asset")
 	require.NoError(t, err)
 
