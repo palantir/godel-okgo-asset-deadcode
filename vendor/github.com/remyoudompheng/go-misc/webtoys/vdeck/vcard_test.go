@@ -10,14 +10,14 @@ var vcard = VCard{
 	FullName: "Anonymous Coward",
 	Name:     NameField{FamilyName: "Anonymous", GivenName: "Coward"},
 	Tel: []TypedString{
-		{Type: []string{"CELL"}, Value: "+33612345678"},
-		{Type: []string{"WORK"}, Value: "+33123456789"},
+		TypedString{Type: []string{"CELL"}, Value: "+33612345678"},
+		TypedString{Type: []string{"WORK"}, Value: "+33123456789"},
 	},
 	Email: []TypedString{
-		{Value: "anonymous.coward@example.com"},
-		{Type: []string{"internet", "pref"}, Value: "coward@anonymous.org"},
+		TypedString{Value: "anonymous.coward@example.com"},
+		TypedString{Type: []string{"internet", "pref"}, Value: "coward@anonymous.org"},
 	},
-	Address: []AddrField{{
+	Address: []AddrField{AddrField{
 		Type:    []string{"HOME"},
 		Street:  "42 Coward St",
 		Country: "Sealand",
