@@ -21,7 +21,8 @@ import (
 	"github.com/palantir/okgo/checker"
 	"github.com/palantir/pkg/cobracli"
 
-	"github.com/palantir/godel-okgo-asset-deadcode/deadcode"
+	"github.com/palantir/godel-okgo-asset-deadcode/deadcode/config"
+	"github.com/palantir/godel-okgo-asset-deadcode/deadcode/creator"
 	"github.com/palantir/godel-okgo-asset-deadcode/generated_src"
 )
 
@@ -32,6 +33,6 @@ func main() {
 func checkMain(osArgs []string) int {
 	os.Args = osArgs
 	var debugFlagVal bool
-	rootCmd := checker.AssetRootCmd(deadcode.Creator(), "run deadcode check")
+	rootCmd := checker.AssetRootCmd(creator.Deadcode(), config.UpgradeConfig, "run deadcode check")
 	return cobracli.ExecuteWithDefaultParamsWithVersion(rootCmd, &debugFlagVal, "")
 }
