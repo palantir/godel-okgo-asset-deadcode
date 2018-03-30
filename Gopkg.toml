@@ -32,4 +32,8 @@ required = ["github.com/remyoudompheng/go-misc/deadcode"]
 
 [[constraint]]
   branch = "master"
+  name = "github.com/palantir/godel"
+
+[[constraint]]
+  branch = "master"
   name = "github.com/palantir/pkg"
