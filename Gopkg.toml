@@ -27,8 +27,8 @@ required = ["github.com/remyoudompheng/go-misc/deadcode"]
   version = "1.3.0"
 
 [[constraint]]
-  branch = "master"
   name = "github.com/palantir/okgo"
+  version = "1.0.0"
 
 [[constraint]]
   branch = "master"
