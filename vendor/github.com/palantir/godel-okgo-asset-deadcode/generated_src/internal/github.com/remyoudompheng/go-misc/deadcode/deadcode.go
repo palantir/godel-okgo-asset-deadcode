@@ -1,8 +1,8 @@
 package amalgomated
 
 import (
-	"fmt"
 	"github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/github.com/remyoudompheng/go-misc/deadcode/amalgomated_flag"
+	"fmt"
 	"go/ast"
 	"go/token"
 	"go/types"
@@ -43,8 +43,8 @@ func fatalf(format string, args ...interface{}) {
 }
 
 type Context struct {
-	cwd       string
-	withTests bool
+	cwd		string
+	withTests	bool
 
 	loader.Config
 }
@@ -120,6 +120,6 @@ func doPackage(prog *loader.Program, pkg *loader.PackageInfo) []types.Object {
 
 type objects []types.Object
 
-func (s objects) Len() int           { return len(s) }
-func (s objects) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
-func (s objects) Less(i, j int) bool { return s[i].Pos() < s[j].Pos() }
+func (s objects) Len() int		{ return len(s) }
+func (s objects) Swap(i, j int)		{ s[i], s[j] = s[j], s[i] }
+func (s objects) Less(i, j int) bool	{ return s[i].Pos() < s[j].Pos() }
