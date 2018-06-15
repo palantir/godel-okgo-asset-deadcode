@@ -16,7 +16,7 @@
     "bzip2/internal/sais",
     "internal",
     "internal/errors",
-    "internal/prefix",
+    "internal/prefix"
   ]
   revision = "cc9eb1d7ad760af14e8f918698f745e80377af4f"
 
@@ -62,7 +62,7 @@
   packages = [
     "dirs",
     "errorstringer",
-    "gofiles",
+    "gofiles"
   ]
   revision = "b64318170fdef93b4462420e0badef8050dbb7ec"
 
@@ -105,32 +105,17 @@
     "framework/verifyorder",
     "godelgetter",
     "pkg/osarch",
-    "pkg/products/v2/products",
-    "pkg/versionedconfig",
+    "pkg/products",
+    "pkg/versionedconfig"
   ]
   revision = "6ef6fc2811e260af0641aae25a45881217b3cf3d"
-
-[[projects]]
-  name = "github.com/palantir/godel-okgo-asset-deadcode"
-  packages = [
-    "deadcode",
-    "deadcode/config",
-    "deadcode/config/internal/legacy",
-    "deadcode/config/internal/v0",
-    "deadcode/creator",
-    "generated_src",
-    "generated_src/internal/github.com/remyoudompheng/go-misc/deadcode",
-    "generated_src/internal/github.com/remyoudompheng/go-misc/deadcode/amalgomated_flag",
-  ]
-  revision = "a69421b039bc0a58d3282241ffe13c70a833da00"
-  version = "v1.0.0"
 
 [[projects]]
   name = "github.com/palantir/okgo"
   packages = [
     "checker",
     "okgo",
-    "okgotester",
+    "okgotester"
   ]
   revision = "32725b197ce491268c43f7036aa702bb99dac21c"
   version = "v1.0.0"
@@ -142,7 +127,7 @@
     "cobracli",
     "matcher",
     "pkgpath",
-    "specdir",
+    "specdir"
   ]
   revision = "23395ebeee5df1083443a6261e5f674a76af91b6"
 
@@ -180,7 +165,7 @@
   name = "github.com/stretchr/testify"
   packages = [
     "assert",
-    "require",
+    "require"
   ]
   revision = "12b6f73e6084dad08a7c6e575284b177ecafbc71"
   version = "v1.2.1"
@@ -197,7 +182,7 @@
     ".",
     "internal/hash",
     "internal/xlog",
-    "lzma",
+    "lzma"
   ]
   revision = "0c6b41e72360850ca4f98dc341fd999726ea007f"
   version = "v0.5.4"
@@ -214,7 +199,7 @@
   packages = [
     "go/ast/astutil",
     "go/buildutil",
-    "go/loader",
+    "go/loader"
   ]
   revision = "059bec968c61383b574810040ba9410712de36c5"
 
@@ -233,6 +218,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d10975aee65b770bd87d911cfc2ac2bd5addfaa0c45d148fb6028d26df892a6f"
+  inputs-digest = "d602dfb9e393bc95077a0974a39473d9e545c0452e796f84e67312ea0f5645a3"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -1,0 +1,3 @@
+packages:
+  deadcode:
+    main: github.com/remyoudompheng/go-misc/deadcode
