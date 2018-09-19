@@ -21,10 +21,6 @@ import (
 	"github.com/palantir/godel-okgo-asset-deadcode/deadcode"
 )
 
-func init() {
-	checker.SetGoBuildDefaultReleaseTags()
-}
-
 func Deadcode() checker.Creator {
 	return checker.NewCreator(
 		deadcode.TypeName,
