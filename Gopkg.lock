@@ -143,6 +143,23 @@
   revision = "6ef6fc2811e260af0641aae25a45881217b3cf3d"
 
 [[projects]]
+  branch = "master"
+  digest = "1:e2bc269a4624c6a74307c124cc880e649b1e5adc5cc11a5171d9346705db2b35"
+  name = "github.com/palantir/godel-okgo-asset-deadcode"
+  packages = [
+    "deadcode",
+    "deadcode/config",
+    "deadcode/config/internal/legacy",
+    "deadcode/config/internal/v0",
+    "deadcode/creator",
+    "generated_src",
+    "generated_src/internal/github.com/nmiyake/deadcode",
+    "generated_src/internal/github.com/nmiyake/deadcode/amalgomated_flag",
+  ]
+  pruneopts = "UT"
+  revision = "b0f34f5a51326b6a53e5f5e82bb1072ca493a846"
+
+[[projects]]
   digest = "1:0b29cbfa2693c66eb778625dfcf20abbedd10b14d6f4600414405ab98ee7dcac"
   name = "github.com/palantir/okgo"
   packages = [
@@ -281,6 +298,14 @@
     "github.com/nmiyake/deadcode",
     "github.com/nmiyake/pkg/gofiles",
     "github.com/palantir/amalgomate/amalgomated",
+    "github.com/palantir/godel-okgo-asset-deadcode/deadcode",
+    "github.com/palantir/godel-okgo-asset-deadcode/deadcode/config",
+    "github.com/palantir/godel-okgo-asset-deadcode/deadcode/config/internal/legacy",
+    "github.com/palantir/godel-okgo-asset-deadcode/deadcode/config/internal/v0",
+    "github.com/palantir/godel-okgo-asset-deadcode/deadcode/creator",
+    "github.com/palantir/godel-okgo-asset-deadcode/generated_src",
+    "github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/github.com/nmiyake/deadcode",
+    "github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/github.com/nmiyake/deadcode/amalgomated_flag",
     "github.com/palantir/godel/framework/pluginapitester",
     "github.com/palantir/godel/pkg/products/v2/products",
     "github.com/palantir/godel/pkg/versionedconfig",
