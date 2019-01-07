@@ -73,6 +73,14 @@
   version = "v2.0"
 
 [[projects]]
+  digest = "1:77cebfee5875a902f0eb1c0be20bc94c1d3ce983c8d8c984f2489dc8f9d4f10e"
+  name = "github.com/nmiyake/deadcode"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "0e900e16d9683be1dd4e506aeb83502080c5227b"
+  version = "v0.1.0"
+
+[[projects]]
   branch = "develop"
   digest = "1:aec618806918ced139b3548e6d1c65af3b9b35dd0b76ed3d6490cd9946c55a71"
   name = "github.com/nmiyake/pkg"
@@ -176,14 +184,6 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:337bed234dc4bc9068b53afa08bd2f858d26069d1fe9fca04f288c28e65aa51a"
-  name = "github.com/remyoudompheng/go-misc"
-  packages = ["deadcode"]
-  pruneopts = "UT"
-  revision = "dfc465eaf84f1a48122fb39b93c8f3d3130ab87f"
-
-[[projects]]
   digest = "1:982714fa3eaafd4251f5ccf3d133b706ad742b86c195d594e1a86050a02f87a8"
   name = "github.com/spf13/cobra"
   packages = ["."]
@@ -241,15 +241,22 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:3bb904aa43844ed7773faff747e121d8ff37c32c552f8c88f107160831d32f59"
+  digest = "1:e3e14d1b6a9d1b170b501885a23c0031f14bb7a453e882dc363e46e5072b6fe9"
   name = "golang.org/x/tools"
   packages = [
     "go/ast/astutil",
-    "go/buildutil",
-    "go/loader",
+    "go/gcexportdata",
+    "go/internal/cgo",
+    "go/internal/gcimporter",
+    "go/internal/packagesdriver",
+    "go/packages",
+    "go/types/typeutil",
+    "internal/fastwalk",
+    "internal/gopathwalk",
+    "internal/semver",
   ]
   pruneopts = "UT"
-  revision = "059bec968c61383b574810040ba9410712de36c5"
+  revision = "e063def13b29c433b3c57fc99257c18c1f9399ce"
 
 [[projects]]
   digest = "1:c4b907986044810b1542df64faf968e8b1c235113f26b06f16a1c86e0d6a48f8"
@@ -271,6 +278,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/nmiyake/deadcode",
     "github.com/nmiyake/pkg/gofiles",
     "github.com/palantir/amalgomate/amalgomated",
     "github.com/palantir/godel/framework/pluginapitester",
@@ -281,9 +289,8 @@
     "github.com/palantir/okgo/okgotester",
     "github.com/palantir/pkg/cobracli",
     "github.com/pkg/errors",
-    "github.com/remyoudompheng/go-misc/deadcode",
     "github.com/stretchr/testify/require",
-    "golang.org/x/tools/go/loader",
+    "golang.org/x/tools/go/packages",
     "gopkg.in/yaml.v2",
   ]
   solver-name = "gps-cdcl"

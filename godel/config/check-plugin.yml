@@ -6,5 +6,4 @@ checks:
   novendor:
     config:
       ignore-pkgs:
-      - ./vendor/github.com/remyoudompheng/go-misc
-      - ./vendor/golang.org/x/tools
+      - ./vendor/github.com/nmiyake/deadcode

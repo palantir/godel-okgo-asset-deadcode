@@ -20,7 +20,11 @@
 #  name = "github.com/x/y"
 #  version = "2.4.0"
 
-required = ["github.com/remyoudompheng/go-misc/deadcode"]
+required = ["github.com/nmiyake/deadcode"]
+
+[[constraint]]
+  name = "github.com/nmiyake/deadcode"
+  version = "0.1.0"
 
 [[constraint]]
   name = "github.com/palantir/amalgomate"
