@@ -23,7 +23,7 @@ import (
 
 	"github.com/palantir/godel-okgo-asset-deadcode/deadcode/config"
 	"github.com/palantir/godel-okgo-asset-deadcode/deadcode/creator"
-	"github.com/palantir/godel-okgo-asset-deadcode/generated_src"
+	amalgomatedcheck "github.com/palantir/godel-okgo-asset-deadcode/generated_src"
 )
 
 func main() {
