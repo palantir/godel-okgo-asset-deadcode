@@ -59,6 +59,10 @@ func TestCheck(t *testing.T) {
 				Name: "deadcode in file",
 				Specs: []gofiles.GoFileSpec{
 					{
+						RelPath: "go.mod",
+						Src:     `module foo`,
+					},
+					{
 						RelPath: "foo.go",
 						Src:     `package main; func main() {}; var unused int`,
 					},
@@ -75,6 +79,10 @@ Check(s) produced output: [deadcode]
 				Name: "deadcode in file from inner directory",
 				Specs: []gofiles.GoFileSpec{
 					{
+						RelPath: "go.mod",
+						Src:     `module foo`,
+					},
+					{
 						RelPath: "foo.go",
 						Src:     `package main; func main() {}; var unused int`,
 					},
@@ -89,20 +97,6 @@ Check(s) produced output: [deadcode]
 ../foo.go:1:35: unused is unused
 Finished deadcode
 Check(s) produced output: [deadcode]
-`,
-			},
-			{
-				Name: "deadcode in vendor directory not flagged",
-				Specs: []gofiles.GoFileSpec{
-					{
-						RelPath: "vendor/github.com/org/project/foo.go",
-						Src: `package main; func main() {}; var unused int
-`,
-					},
-				},
-				ConfigFiles: configFiles,
-				WantOutput: `Running deadcode...
-Finished deadcode
 `,
 			},
 		},
