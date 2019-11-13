@@ -12,26 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package legacy
+package versionedconfig
 
 import (
-	"github.com/palantir/godel/v2/pkg/versionedconfig"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )
 
-type Config struct {
-	versionedconfig.ConfigWithLegacy `yaml:",inline"`
-	Args                             []string `yaml:"args"`
-}
-
-func UpgradeConfig(cfgBytes []byte) ([]byte, error) {
-	var legacyCfg Config
-	if err := yaml.UnmarshalStrict(cfgBytes, &legacyCfg); err != nil {
-		return nil, errors.Wrapf(err, "failed to unmarshal deadcode-asset legacy configuration")
+// ConfigNotSupported verifies that the provided bytes represent empty YAML. If the YAML is non-empty, return an error.
+func ConfigNotSupported(name string, cfgBytes []byte) ([]byte, error) {
+	var mapSlice yaml.MapSlice
+	if err := yaml.Unmarshal(cfgBytes, &mapSlice); err != nil {
+		return nil, errors.Wrapf(err, "failed to unmarshal %s configuration as yaml.MapSlice", name)
 	}
-	if len(legacyCfg.Args) == 0 {
-		return nil, nil
+	if len(mapSlice) != 0 {
+		return nil, errors.Errorf("%s does not currently support configuration", name)
 	}
-	return nil, errors.Errorf(`deadcode-asset does not support legacy configuration with a non-empty "args" field`)
+	return cfgBytes, nil
 }

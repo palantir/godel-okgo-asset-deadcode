@@ -12,26 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package legacy
+package packages
 
 import (
-	"github.com/palantir/godel/v2/pkg/versionedconfig"
+	"github.com/palantir/pkg/matcher"
+	"github.com/palantir/pkg/pkgpath"
 	"github.com/pkg/errors"
-	"gopkg.in/yaml.v2"
 )
 
-type Config struct {
-	versionedconfig.ConfigWithLegacy `yaml:",inline"`
-	Args                             []string `yaml:"args"`
-}
+func List(exclude matcher.Matcher, wd string) ([]string, error) {
+	pkgs, err := pkgpath.PackagesInDir(wd, exclude)
+	if err != nil {
+		return nil, errors.Wrapf(err, "failed to list packages")
+	}
 
-func UpgradeConfig(cfgBytes []byte) ([]byte, error) {
-	var legacyCfg Config
-	if err := yaml.UnmarshalStrict(cfgBytes, &legacyCfg); err != nil {
-		return nil, errors.Wrapf(err, "failed to unmarshal deadcode-asset legacy configuration")
+	pkgPaths, err := pkgs.Paths(pkgpath.Relative)
+	if err != nil {
+		return nil, errors.Wrapf(err, "failed to get package paths")
 	}
-	if len(legacyCfg.Args) == 0 {
-		return nil, nil
-	}
-	return nil, errors.Errorf(`deadcode-asset does not support legacy configuration with a non-empty "args" field`)
+
+	return pkgPaths, nil
 }

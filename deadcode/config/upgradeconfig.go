@@ -15,7 +15,7 @@
 package config
 
 import (
-	"github.com/palantir/godel/pkg/versionedconfig"
+	"github.com/palantir/godel/v2/pkg/versionedconfig"
 	"github.com/pkg/errors"
 
 	"github.com/palantir/godel-okgo-asset-deadcode/deadcode/config/internal/legacy"

@@ -12,26 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package legacy
+package config
 
 import (
-	"github.com/palantir/godel/v2/pkg/versionedconfig"
 	"github.com/pkg/errors"
-	"gopkg.in/yaml.v2"
+
+	v0 "github.com/palantir/godel/v2/framework/godel/config/internal/v0"
+	"github.com/palantir/godel/v2/pkg/versionedconfig"
 )
 
-type Config struct {
-	versionedconfig.ConfigWithLegacy `yaml:",inline"`
-	Args                             []string `yaml:"args"`
-}
-
 func UpgradeConfig(cfgBytes []byte) ([]byte, error) {
-	var legacyCfg Config
-	if err := yaml.UnmarshalStrict(cfgBytes, &legacyCfg); err != nil {
-		return nil, errors.Wrapf(err, "failed to unmarshal deadcode-asset legacy configuration")
+	// legacy configuration is fully compatible with 2.0 configuration so no need to migrate. Configuration for godel is
+	// also special because it has already been loaded by the time the program is run.
+	version, err := versionedconfig.ConfigVersion(cfgBytes)
+	if err != nil {
+		return nil, err
 	}
-	if len(legacyCfg.Args) == 0 {
-		return nil, nil
+	switch version {
+	case "", "0":
+		return v0.UpgradeConfig(cfgBytes)
+	default:
+		return nil, errors.Errorf("unsupported version: %s", version)
 	}
-	return nil, errors.Errorf(`deadcode-asset does not support legacy configuration with a non-empty "args" field`)
 }
