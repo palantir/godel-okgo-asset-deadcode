@@ -12,26 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package legacy
+package v0
 
 import (
-	"github.com/palantir/godel/v2/pkg/versionedconfig"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )
 
-type Config struct {
-	versionedconfig.ConfigWithLegacy `yaml:",inline"`
-	Args                             []string `yaml:"args"`
-}
-
 func UpgradeConfig(cfgBytes []byte) ([]byte, error) {
-	var legacyCfg Config
-	if err := yaml.UnmarshalStrict(cfgBytes, &legacyCfg); err != nil {
-		return nil, errors.Wrapf(err, "failed to unmarshal deadcode-asset legacy configuration")
+	var cfg GodelConfig
+	if err := yaml.Unmarshal(cfgBytes, &cfg); err != nil {
+		return nil, errors.Wrapf(err, "failed to unmarshal godel v0 configuration")
 	}
-	if len(legacyCfg.Args) == 0 {
-		return nil, nil
-	}
-	return nil, errors.Errorf(`deadcode-asset does not support legacy configuration with a non-empty "args" field`)
+	return cfgBytes, nil
 }
