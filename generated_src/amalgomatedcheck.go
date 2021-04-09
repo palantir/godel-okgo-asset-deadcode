@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	deadcode "github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/github.com/nmiyake/deadcode"
+	deadcode "."
 )
 
 var programs = map[string]func(){"deadcode": func() {
