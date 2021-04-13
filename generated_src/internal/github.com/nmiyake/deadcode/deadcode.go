@@ -1,7 +1,7 @@
 package amalgomated
 
 import (
-	"github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/github.com/nmiyake/deadcode/amalgomated_flag"
+	"github.com/palantir/godel-okgo-asset-deadcode/generated_src/internal/amalgomated_flag"
 	"fmt"
 	"go/ast"
 	"go/token"
