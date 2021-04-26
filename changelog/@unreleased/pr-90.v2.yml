@@ -1,0 +1,5 @@
+type: improvement
+improvement:
+  description: Update golang.org/x/tools module dependency
+  links:
+  - https://github.com/palantir/godel-okgo-asset-deadcode/pull/90
