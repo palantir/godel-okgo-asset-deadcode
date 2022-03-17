@@ -1,0 +1,5 @@
+type: improvement
+improvement:
+  description: Updates golang.org/x/tools module to v0.1.10 to support Go 1.18
+  links:
+  - https://github.com/palantir/godel-okgo-asset-deadcode/pull/145
