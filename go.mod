@@ -1,6 +1,6 @@
 module github.com/palantir/godel-okgo-asset-deadcode
 
-go 1.17
+go 1.18
 
 require (
 	github.com/nmiyake/deadcode v1.0.0
