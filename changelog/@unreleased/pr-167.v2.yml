@@ -1,0 +1,5 @@
+type: fix
+fix:
+  description: Fixes "Unexpected package creation during export data loading" failure.
+  links:
+  - https://github.com/palantir/godel-okgo-asset-deadcode/pull/167
