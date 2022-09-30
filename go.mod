@@ -8,7 +8,7 @@ require (
 	github.com/palantir/amalgomate v1.6.0
 	github.com/palantir/godel/v2 v2.67.0
 	github.com/palantir/okgo v1.8.0
-	github.com/palantir/pkg/cobracli v1.1.0
+	github.com/palantir/pkg/cobracli v1.2.0
 	github.com/pkg/errors v0.8.1
 	github.com/stretchr/testify v1.8.0
 	golang.org/x/tools v0.1.11-0.20220531141438-2bb78cf04ecd
@@ -39,10 +39,10 @@ require (
 	github.com/nmiyake/pkg/errorstringer v1.1.0 // indirect
 	github.com/nwaples/rardecode v1.0.0 // indirect
 	github.com/palantir/godel v2.14.0+incompatible // indirect
-	github.com/palantir/pkg v1.0.1 // indirect
-	github.com/palantir/pkg/matcher v1.1.0 // indirect
-	github.com/palantir/pkg/pkgpath v1.1.0 // indirect
-	github.com/palantir/pkg/specdir v1.1.0 // indirect
+	github.com/palantir/pkg v1.1.0 // indirect
+	github.com/palantir/pkg/matcher v1.2.0 // indirect
+	github.com/palantir/pkg/pkgpath v1.2.0 // indirect
+	github.com/palantir/pkg/specdir v1.2.0 // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rogpeppe/go-internal v1.7.0 // indirect
