@@ -10,7 +10,7 @@ require (
 	github.com/palantir/okgo v1.8.0
 	github.com/palantir/pkg/cobracli v1.2.0
 	github.com/pkg/errors v0.8.1
-	github.com/stretchr/testify v1.8.3
+	github.com/stretchr/testify v1.8.4
 	golang.org/x/tools v0.9.1
 	gopkg.in/yaml.v2 v2.4.0
 )
