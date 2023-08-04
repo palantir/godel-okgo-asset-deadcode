@@ -5,13 +5,13 @@ go 1.20
 require (
 	github.com/nmiyake/deadcode v1.0.0
 	github.com/nmiyake/pkg/gofiles v1.2.0
-	github.com/palantir/amalgomate v1.31.0
-	github.com/palantir/godel/v2 v2.88.0
-	github.com/palantir/okgo v1.38.0
+	github.com/palantir/amalgomate v1.32.0
+	github.com/palantir/godel/v2 v2.89.0
+	github.com/palantir/okgo v1.39.0
 	github.com/palantir/pkg/cobracli v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
-	golang.org/x/tools v0.11.0
+	golang.org/x/tools v0.11.1
 	gopkg.in/yaml.v2 v2.4.0
 )
 
