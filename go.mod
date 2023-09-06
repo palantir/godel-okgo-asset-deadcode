@@ -6,8 +6,8 @@ require (
 	github.com/nmiyake/deadcode v1.0.0
 	github.com/nmiyake/pkg/gofiles v1.2.0
 	github.com/palantir/amalgomate v1.32.0
-	github.com/palantir/godel/v2 v2.89.0
-	github.com/palantir/okgo v1.39.0
+	github.com/palantir/godel/v2 v2.91.0
+	github.com/palantir/okgo v1.40.0
 	github.com/palantir/pkg/cobracli v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
