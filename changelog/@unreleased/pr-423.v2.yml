@@ -1,0 +1,5 @@
+type: improvement
+improvement:
+  description: Build and publish using Go 1.24
+  links:
+  - https://github.com/palantir/godel-okgo-asset-deadcode/pull/423
