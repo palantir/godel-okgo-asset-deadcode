@@ -22,3 +22,7 @@ exclude:
     - generated_src
   paths:
     - godel
+default-tasks:
+  tasks:
+    com.palantir.okgo:check-plugin:
+      exclude-all-default-assets: true
