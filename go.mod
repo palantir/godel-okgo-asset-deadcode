@@ -2,6 +2,8 @@ module github.com/palantir/godel-okgo-asset-deadcode
 
 go 1.26.0
 
+toolchain go1.26.3
+
 require (
 	github.com/nmiyake/deadcode v1.0.0
 	github.com/nmiyake/pkg/gofiles v1.2.0
