@@ -13,7 +13,7 @@ require (
 	github.com/palantir/pkg/cobracli v1.3.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/tools v0.46.0
+	golang.org/x/tools v0.47.0
 	gopkg.in/yaml.v2 v2.4.0
 )
 
